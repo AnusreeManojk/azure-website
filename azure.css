@@ -334,9 +334,10 @@ button:last-child {
   height: max-content;
   margin-top: 0px;
   width: 100%;
-  position: sticky;
   border-bottom: 1px solid #d4d4d4;
   border-top: 1px solid #d4d4d4;
+  position: sticky;
+  z-index: 500;
 
 }
 
@@ -1311,6 +1312,8 @@ button:last-child {
   box-sizing: border-box;
   justify-content: center;
   flex-flow: column;
+  /* position: relative; */
+
 
 }
 .content5-head{
@@ -1360,16 +1363,29 @@ button:last-child {
   box-sizing: border-box;
 
 }
-.content5-portion{
-  box-sizing: border-box;
-  /* display: block; */
+.content5-bg{
+  display: flex;
+  width: 100%;
   background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain);
-  /* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain); */
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
-  /* height: 500px; */
   background-size: cover;
+  /* position: absolute; */
+  height: 100%;
+  /* top:2rem; */
+}
+
+.content5-portion{
+  box-sizing: border-box;
+  /* display: block; */
+  /* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain);
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover; */
+  width: 100%;
+  /* position: relative; */
 }
 .content5-portion-padding{
   display: flex;
@@ -1510,6 +1526,7 @@ border-bottom-right-radius: 8px;
 }
 .content6{
   width: 100%;
+  /* margin-top: -20px; */
 }
 .content6-bg{
   object-fit: cover;
@@ -1604,13 +1621,11 @@ top:0;
   width: 100%;
   align-items: center;
   justify-content: center;
-  justify-content: center;
   text-align: center;  
   background-color: #b3daf0;
   padding: 1rem;
   border: none;
   border-radius: 8px;
- width: 100%;
  box-sizing: border-box;
 
 }
@@ -1626,10 +1641,8 @@ top:0;
   box-sizing: border-box;
 }
 .content7-main{
-  /* margin-top: 1rem; */
-  /* margin-right: -.25rem;
-    margin-left: -.25rem; */
-    display: flex;
+    display: flex; 
+   
 }
 .content7-padding{
   display: flex;
@@ -1637,12 +1650,13 @@ top:0;
   padding-right: .25rem;
     padding-left: .25rem;
     width: 100%;
+    
 }
 .content7-section1-padding{
   padding: .1875rem;
   width: 100%;
   display: flex;
-  
+  flex-flow: column;
 }
 .content7-section1{
   display: flex;
@@ -1651,12 +1665,13 @@ top:0;
   background-color:#fefefe ;
   height: auto;
   border-radius: 16px;
+  box-shadow: 0 0 0.125rem rgb(0, 0, 0, 0.12), 0 0.125rem 0.25rem rgba(0, 0, 0, 0.14);
+  border: 0.0625rem solid #c1c9cf;
 }
 .content7-img{
   width: 100%;
   border-radius: 8px;
   display: flex;
-  object-fit: cover;
   padding-right: .5rem;
   padding-left: .5rem;
   padding-top: 0.5rem;
@@ -1667,6 +1682,8 @@ top:0;
   width: 100%;
   height:100%;
   border-radius: 8px;
+  box-sizing: border-box;
+
 
 }
 .content7-descript{
@@ -1690,6 +1707,7 @@ top:0;
   align-items: flex-start;
   display: flex;
   justify-content: left;
+  box-sizing: border-box;
 }
 .img-border{
   max-width: 100%;
@@ -1698,7 +1716,7 @@ top:0;
   align-items: flex-start;
   border-radius: 8px;
   border: 0.0625rem solid #c1c9cf;
-
+  box-sizing: border-box;
 }
 .token-text{
   display: flex;
@@ -1709,6 +1727,8 @@ top:0;
 width: 100%;
 height: 100%;
 border-radius: 8px;
+box-sizing: border-box;
+
 }
 .token-text{
   width: 100%;
@@ -1725,8 +1745,308 @@ border-radius: 8px;
   text-align: left;
   padding-right: 10px;
 }
+.content7-footer{
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+ 
+
+}
+.products{
+  display: flex;
+  flex-flow: column;
+  gap:0.5rem;
+}
 .product-head{
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+}
+.product-head span{
+  font-family: "segoe-medium";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+}
+.product-link{
+  display: flex;
+  width: 100%;
+  flex-flow: row;
+  box-sizing: border-box;
+}
+.product-link ul{
+  gap:0.75rem;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  padding-left: 0;
+  margin-left: 0;
+  width: 100%;
+}
+.product-link ul li{
+  display: flex;
+  width:100%;
+ flex-flow: row;
+ gap:20px
+  
+}
+.product-link .img-product{
+  display: flex;
+  flex-flow: row;
+  gap:8px;
+  /* width: 100%; */
+
+}
+.small-img{
+width: 100%;
+max-width: 20px;
+  max-height: 20px;
+  height: 100%;
+  display: flex;
+  margin-top: 8px;
+}
+.small-img img{
+  width: 20px;
+  height: 20px;
+}
+.img-descript{
+  display: flex;
+  /* width:100%; */
+  height: 100%;
+  
+}
+.img-descript span{
+  color: #0067b8;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: "segoe-medium";
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: -0.48px;
+  text-decoration: underline;
+  /* width: 100%; */
+
+}
+.product-button-margin{
+  margin-top: 1.5rem;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+}
+.product-button{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;  
+  background-color: #0078d4;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+ box-sizing: border-box;
+}
+.product-button span{
+  font-family: "segoe-medium";
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -.3px;
+  width: 100%;
+  color: #fff;
+}
+.round-button{
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  gap: 8px;
+}
+.round-button img{
+  width: 32px;
+ height: 32px;
+
+ padding: 8px;
+}
+.round-button>div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  /* width: 50px;
+  height: 50px; */
+}
+.previous-button{
+  
+  border: 2px solid  #c7ced6;
+}
+.previous-button img{
+ filter: opacity(0.4);
+
+}
+.next-button{
+  border: 2px solid  #17253d;
+
+}
+.next-button img{
+  transform: scaleX(-1);
+}
+.site-indicators{
+  display: none;
+}
+.content8{
+  width: 100%;
+  display: 100%;
+  background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/cta-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=868&qlt=100&fmt=png-alpha&fit=constrain);
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+}
+
+.content8-main{
+  padding-right: 0.25rem;
+  padding-top: 1px;
+}
+.content8-cards{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  width: 100%;
+  box-sizing: border-box;
+   gap:8px
+
+}
+.card-padding{
   display: block;
+  box-sizing: border-box;
+  border-radius: 16px;
+  box-shadow: 0 0 0.125rem rgb(0, 0, 0, 0.12), 0 0.125rem 0.25rem rgba(0, 0, 0, 0.14);
+  /* border: 0.0625rem solid #c1c9cf; */
+  /* box-shadow: 0px 0px 1px 3px rgba(0, 0, 0, 0.1); */
+  background-color: #fefefe;
+  box-sizing: border-box;
+align-items: center;
+}
+.card{
+  display: flex;
+  flex-flow:column ;  
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: space-between;
+  padding:1rem;
+}
+.card-descript{
+  display: flex;
+  flex-flow: column;
+  gap: 0.75rem;
+  box-sizing: border-box;
+
+}
+.card-title{
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  box-sizing: border-box;
+
+}
+.card-title h3{
+  font-family: "segoe-medium";
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -1px;
+  font-weight: 400;
+}
+.card-text{
+  display: flex;
+  width: 100%;align-items: flex-start;
+  text-align: left;
+  box-sizing: border-box;
+
+}
+.card-text p{
+  font-family: "segeo-regular";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  font-weight: 400;
+}
+.spacer{
+  width: 100%;
+  height: 48px;
+  color: #f7f7f7;
+}
+footer{
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  min-width: 280px;
+  padding-bottom: 30px;
+}
+.footer-nav{
+  padding: 0 12px;
+  max-width: calc(1600px + 10%);
+  display: block;
+  box-sizing: border-box;
+}
+.footer-grid{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  width: 100%;
+  box-sizing: border-box;
+}
+.grid-item{
+  padding: 0 12px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: left;
+  text-align: left
+}
+.grid-item-head{
+  color: #616161;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 36px 0 4px;
+    padding-top: 36px;
+    padding-right: 0px;
+    padding-bottom: 4px;
+    font-family: "segoe-medium";
+}
+.grid-list{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: left;
+}
+.grid-list ul{
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: left;
+  padding: 0;
+  margin: 0;
+}
+.grid-list ul li{
+  color: #616161;
+  padding: 8px 0;
+  font-size: 11px;
+  line-height: 16px;
+  font-family: "segeo-regular";
+  text-align: left;
+  align-items: flex-start;
+  display: flex;
+}
+.bottom-footer{
+  display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 30px 24px 16px;
+    box-sizing: border-box;
+    max-width: calc(1600px + 10%);
+
 }
 @media screen and (min-width:270px) {
 
@@ -1754,9 +2074,10 @@ border-radius: 8px;
 .content7{
   display: block;
   box-sizing: border-box;
-}
 
 }
+
+}`
 
 @media screen and (min-width:346px) {
   .background video {
@@ -1893,12 +2214,20 @@ border-radius: 8px;
     padding-right: 4rem;
     padding-left: 4rem;
   }
-  .content5-portion{
+  .content5-bg{
     background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain);
     /* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain); */
   }
   .glob-button-margin{
     width: fit-content;
+  }
+  .product-button-margin{
+    width: fit-content;
+
+  }
+  .content8{
+    /* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/cta-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=868&qlt=100&fmt=png-alpha&fit=constrain); */
+   background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/cta-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=868&qlt=100&fmt=png-alpha&fit=constrain);
   }
 
 }
@@ -1913,7 +2242,7 @@ border-radius: 8px;
   .mobile-hide {
     display: none;
   }
-  .content5-portion{
+  .content5-bg{
     background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain);
      /* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain); */
   }
@@ -2426,26 +2755,19 @@ border-radius: 8px;
     display: flex;
     aspect-ratio: 10/13.8;
     max-height: 496px;
-
-
-    /* f; */
   }
   .top-image img{
     max-height: 496px;
-   /* max-height: 100%; */
   }
   .top-descript-padding{
     align-items: center;
     justify-content: center;
-    /* padding: 0; */
     display: flex;
     vertical-align: middle;
-    /* padding:70px 0; */
     width: 100%;
     height: 100%;
   }
   .button-empty{
-   /* height: 100%; */
    min-height: 70px;
     /* eight: 60px;h */
     display: flex;
@@ -2466,7 +2788,7 @@ border-radius: 8px;
   .long-button ul li{
     height: 64px;
   }
-  .content5-portion{
+  .content5-bg{
     background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain);
   }
   .tab-panel{
@@ -2495,10 +2817,135 @@ border-radius: 8px;
 .glob-descript{
   margin-top: 1rem;
 }
+.content7-section1{
+  display: flex;
+  flex-flow: row-reverse;
 }
+.content7-img{
+  /* padding-bottom: 0.5rem; */
+  /* aspect-ratio: 351/450; */
+  object-fit: cover;
+  position: center;
+  border-radius: 16px;
+
+}
+.content7-img img{
+  aspect-ratio: 351/450;
+  position: center;
+  object-fit: cover;
+  border-radius: 16px;
+  height: 503px;
+
+}
+.content7-descript{
+  height: 100%;
+  display: flex;
+  /* justify-content: center; */
+  gap:2rem;
+  padding: 1.5rem;
+}
+
+.descript-top{
+  gap:1rem
+}
+.product-link ul li{
+  flex-flow: column;
+  gap:16px;
+}
+.content7-section1{
+  border-radius: 24px;
+}
+
+.content7-footer{
+  padding-top: 3rem;
+}
+.round-button{
+  display:none ;
+}
+.site-indicators{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  padding-bottom: 32px;
+}
+.site-indicators ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  width: 100%;
+  padding: 0;
+}
+.site-indicators ul li{
+  max-width: 200px;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 0.0625rem solid #e1e3e6;
+  box-shadow: 0 0 0.125rem rgb(0, 0, 0, 0.12), 0 0.125rem 0.25rem rgba(0, 0, 0, 0.14);
+
+
+}
+.site-indicators ul li:first-child{
+  border-top-left-radius: 16px;
+border-bottom-left-radius: 16px;
+}
+.site-indicators ul li:last-child{
+  border-top-right-radius: 16px;
+border-bottom-right-radius: 16px;
+}
+.site-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: min-content;
+  padding: 2rem;
+
+}
+.site-img img{
+  width: 100%;
+  height: 100%;
+  padding: 1.4px 0;
+  display: flex;
+
+}
+.content8-main{
+  padding-top: 1rem;
+  padding-left: 0.25rem;
+}
+.content8-cards{
+  grid-template-columns: repeat(3,1fr);
+}
+.content8{
+/* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/cta-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=868&qlt=100&fmt=png-alpha&fit=constrain); */
+background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/CTA-BG-desktop@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1600&hei=512&qlt=100&fmt=png-alpha&fit=constrain);
+}
+.card{
+  padding: 1.5rem;
+  min-height: 100%;
+  gap: 3rem;
+  justify-content: space-between;
+}
+.card-descript{
+  padding-right: 24px;
+  gap: 16px;
+  margin-top: 1px;
+}
+.content8-cards{
+  column-gap: 16px;
+}
+.card-padding{
+  border-radius: 24px;
   
+}
+ .card .first-content-footer{
+  margin-top:1px;
 
-
+}
+}
 @media screen and (min-width:920px) {
   .nav-content2 button {
     height: max-content;
@@ -2510,6 +2957,17 @@ border-radius: 8px;
     /* padding-top: 10px; */
 
     padding: 0;
+  }
+}
+@media screen and (min-width:966px) {
+
+  .content7-img img{
+    height: 461px;
+  }
+}
+@media screen and (min-width:973px) {
+  .content7-img img{
+    height: 433px;
   }
 }
 
@@ -2642,8 +3100,11 @@ border-radius: 8px;
   .main-section {
     align-items: center;
   }
-  .content5-portion{
+  .content5-bg{
     background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain);
+  }
+  .content8{
+    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/CTA-BG-desktop@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=3200&hei=1024&qlt=100&fmt=png-alpha&fit=constrain);
   }
 
 }
@@ -2661,7 +3122,12 @@ border-radius: 8px;
     display: none;
   }
 }
-
+@media screen and (min-width:1218px) {
+  .content7-img img{
+   aspect-ratio: 176/145;
+   height: auto;
+  }
+}
 @media screen and (min-width:1254px) {
   .header-nav ul li:nth-child(4) {
     display: flex;
@@ -2830,18 +3296,25 @@ border-radius: 8px;
   margin-right: auto;
   max-width: calc(1336px);
   }
-  .content5-portion{
-    /* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain); */
+  .content5-bg{
     background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain);
-  
-  object-fit: cover;
-}
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+  }
+
 .content6-bg{
   height: 412px;
 }
+.content7-img img{
+  aspect-ratio: 211/174;
+  height: auto;
 
 }
-
+.content8{
+  background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/CTA-BG-desktop@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=3200&hei=1024&qlt=100&fmt=png-alpha&fit=constrain);
+}
+}
 @media screen and (min-width:1471px) {
   .banner-content {
     max-width: 653.94px;
@@ -2858,4 +3331,4 @@ border-radius: 8px;
     display: none;
   }
 }
-/* 2160 */
+/* 2946 */
