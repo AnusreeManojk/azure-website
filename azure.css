@@ -64,15 +64,12 @@ header {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  /* padding: 2px 0; */
-  width: 100%;
+  padding-bottom: 8px;
   margin-top: -10px;
-  /* background-color: aqua; */
-  bottom: -15px;
   overflow-x: hidden;
   border-bottom: 1px solid #d4d4d4;
-  height: 54px;
-
+  height: 54.5px;
+  width: 100%;
 }
 
 .left-side {
@@ -80,10 +77,13 @@ header {
   flex-flow: row;
   justify-content: left;
   align-items: center;
-  height: 54px;
+   margin-top: 5px;  
 
 }
 
+.empty{
+  display: hidden;
+}
 .menu-button {
   margin: 1px;
   width: 48px;
@@ -91,8 +91,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-top: -4px; */
-  /* margin-left: -1px; */
+  margin-top: 5px;
+  
 }
 
 .menu-button img {
@@ -118,6 +118,7 @@ header {
   width: 20px;
   height: 22px;
   transform: scaleX(-1);
+  margin-top: 2px;
 }
 
 .logo {
@@ -125,11 +126,11 @@ header {
   padding: 12px 4px 5px 4px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:left;
   width: 100%;
   max-width: 116px;
   height: 44px;
-  margin-left: -3px;
+  margin-left: -78px;
 
 }
 
@@ -137,11 +138,6 @@ header {
   margin-top: -3px;
   max-width: none;
   width: 108px;
-}
-
-.empty {
-  right: 0;
-  width: 82px;
 }
 
 .azure-button {
@@ -154,11 +150,10 @@ header {
   height: 100%;
   margin: 0 1px;
   text-align: left;
-  /* letter-spacing: -0.1px; */
   font-size: 15px;
   gap: 9px;
-  /* border-bottom: 1px solid #d4d4d4; */
   overflow-x: hidden;
+  border-bottom: 1px solid rgb(226, 220, 220);
 }
 
 
@@ -176,57 +171,57 @@ header {
   display: none;
 }
 
-.main-content {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-}
 
 .banner {
   display: flex;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 150%; 
+   overflow: hidden;
 
 }
 
 .background {
-  object-fit: cover;
-  /* width: 100% !important; */
-  top: 0;
-  display: flex;
-  width: 100%;
-  /* height: 100%; */
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: unset;
+  height: 630px;
   overflow: hidden;
-  /* aspect-ratio: 1/1; */
+  box-sizing: border-box;
+  object-fit: cover;
+  min-height: 580px;
+  width: 100vw;
+  z-index: -30;
 }
 
 .background video {
-  width: 100%;
+  width: 100% !important;
+  display: block !important;
+  box-sizing: border-box;
   height: 100%;
   object-fit: cover;
-  aspect-ratio: 1/1;
-  min-height: 664px;
-  display: flex;
-  overflow: hidden;
+  min-height: 580px;
+  object-position: center;
+  
 }
 
 .banner-content-padding {
-  position: absolute;
-  /* padding-right: 4rem; */
-  /* padding-left: 4rem; */
-  /* padding: 0 64px; */
-  width: 100vw;
-  margin-right: auto;
-  margin-left: auto;
-  /* top:88px; */
-  /* height: 100%; */
+ 
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: content-box;
+  position: relative;
+  padding-bottom: 6rem
 
 }
-
 .banner-margin {
-  padding: 0 16px;
-  /* height: max-content; */
+  padding-right: -5px;
+  width: 100%;
+    padding-top: 0;
+    margin-inline: auto;
+  min-height: max-content;
 }
 
 .banner-content {
@@ -234,11 +229,7 @@ header {
   flex-flow: column;
   margin-top: 2rem;
   text-align: left;
-  /* align-items: center; */
   justify-content: left;
-
-  /* height: max-content; */
-
 
 }
 
@@ -247,12 +238,14 @@ header {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.96px;
-  padding-bottom: 10px;
+  padding-bottom: 0.75rem;
+  /* margin-top: 22px; */
 }
 
 .head {
   width: 100%;
   text-align: left;
+  padding: 0;
 }
 
 .head h1 {
@@ -266,7 +259,7 @@ header {
 .heading-paragraph {
   display: flex;
   text-align: left;
-  padding-top: 10px;
+  padding-top: 0.75rem;
 }
 
 .heading-paragraph p {
@@ -294,13 +287,17 @@ header {
   font-size: .9375rem;
   line-height: 1.375rem;
   letter-spacing: -.02em;
-  padding: 1rem;
+  padding: 0.90rem;
   border: none;
   border-radius: 8px;
   font-family: "segoe-medium";
   font-size: 15px;
   line-height: 1.375rem;
-  letter-spacing: -0.3px
+  letter-spacing: -0.3px;
+  height:52px;
+}
+.head-buttons button span{
+  margin-top: 0.011rem;
 }
 
 .head-buttons button:first-child {
@@ -328,11 +325,8 @@ button:last-child {
   display: flex;
   flex-flow: row;
   height: fit-content;
-  margin-top: 0px;
-  /* background-color: #0078d4; */
   width: max-content;
   height: max-content;
-  margin-top: 0px;
   width: 100%;
   border-bottom: 1px solid #d4d4d4;
   border-top: 1px solid #d4d4d4;
@@ -347,6 +341,7 @@ button:last-child {
   flex-flow: row;
   width: 100%;
   justify-content: space-between;
+  background-color: #fff;
 }
 
 .nav-content1 {
@@ -386,7 +381,6 @@ button:last-child {
 
 .nav-content2 button {
   border: none;
-  /* padding: 10px 12px; */
   display: flex;
   font-family: "segoe-medium";
   font-size: 15px;
@@ -396,7 +390,6 @@ button:last-child {
 
 .nav-content2 button>div {
   background-color: #89c402;
-  /* padding: 0.75rem; */
   width: 100%;
 
 }
@@ -406,7 +399,6 @@ button:last-child {
 }
 
 .main-section {
-  /* width: max-content; */
   display: block;
   background-color: #f4fafd;
   width: 100%;
@@ -426,7 +418,6 @@ button:last-child {
 .content1 {
   padding-right: 1rem;
   padding-left: 1rem;
-  /* width: 100%; */
   margin-right: auto;
   margin-left: auto;
   box-sizing: border-box;
@@ -446,6 +437,7 @@ button:last-child {
   line-height: 16px;
   letter-spacing: 0.96px;
   padding-bottom: 10px;
+  color: #1f2c43;
 }
 
 .head-one h2 {
@@ -468,8 +460,6 @@ button:last-child {
   grid-template-columns: repeat(1, 1fr);
   padding-right: .25rem;
   padding-left: .25rem;
-  /* column-gap: 0.75rem; */
-  /* flex-wrap: wrap; */
   width: 100%;
   height: 100%;
   gap: 10px;
@@ -484,15 +474,12 @@ button:last-child {
   height: 100%;
   border: 0.0625rem solid #e6f2fb;
   border-radius: 1rem;
-  /* padding-bottom: 20px; */
 
 }
 
 .item-top-padding {
   padding: 8px 8px 0 8px;
   display: block;
-  /* width: 100%; */
-
 }
 
 .item-top {
@@ -501,7 +488,6 @@ button:last-child {
   width: inherit;
   height: auto;
   object-fit: cover;
-  /* aspect-ratio:1.77778; */
 
 
 }
@@ -511,7 +497,6 @@ button:last-child {
   object-fit: cover;
   border-radius: 8px;
   display: flex;
-  /* aspect-ratio:1.77778; */
   height: auto;
 }
 
@@ -585,8 +570,6 @@ button:last-child {
 .first-content-footer>div span {
   display: flex;
   align-items: center;
-  /* padding: 0.5rem; */
-  /* border: 2px solid transparent; */
   justify-content: center;
   width: 34.7px;
   height: 35px;
@@ -621,7 +604,6 @@ button:last-child {
 
 }
 
-
 .second-item {
   margin-top: 1.5rem;
   display: flex;
@@ -646,10 +628,8 @@ button:last-child {
 
 .tab-overflow {
   overflow-x: hidden;
-  /* overflow-y: hidden; */
   scrollbar-width: none;
   display: block;
-  /* width: 696px; */
   width: 100%;
 }
 
@@ -704,7 +684,6 @@ button:last-child {
 }
 
 .tab-arrow>div {
-  /* background: linear-gradient(90deg,#f2f2f2 25%,rgba(242,242,242,0) 100%);; */
   border: 2px solid #004275;
   border-radius: 12.5rem;
   width: calc((0.5rem*2)+1.5rem);
@@ -723,7 +702,6 @@ button:last-child {
   margin-right: -.25rem;
   margin-left: -.25rem;
   width: 100%;
-  /* overflow: hidden; */
   height: 100%;
 }
 
@@ -731,7 +709,6 @@ button:last-child {
   width: 100%;
   padding-right: .5rem;
   padding-left: .5rem;
-  /* overflow: hidden; */
 
 }
 
@@ -740,7 +717,6 @@ button:last-child {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  /* overflow: hidden; */
 
 }
 
@@ -750,7 +726,6 @@ button:last-child {
   flex-flow: column;
   width: 100%;
   padding: 0;
-  /* overflow: hidden; */
 
 }
 
@@ -770,7 +745,6 @@ button:last-child {
   font-display: flex;
   width: 100%;
   flex-flow: column;
-  /* margin-left:2rem; */
 }
 
 .list-head {
@@ -779,7 +753,6 @@ button:last-child {
   text-align: left;
   cursor: pointer;
   align-items: center;
-  /* padding-bottom: 1.5rem; */
   justify-content: space-between;
 }
 
@@ -843,7 +816,6 @@ button:last-child {
 .ai-img {
   width: 100%;
   border-radius: 16px;
-  /* max-width: 100%; */
   height: auto;
   display: flex;
   object-fit: cover;
@@ -863,8 +835,6 @@ button:last-child {
   position: absolute;
   padding: 0.75rem;
   display: block;
-  /* margin-top: 140px;
- margin-left: 200px; */
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -919,14 +889,6 @@ button:last-child {
   background-image: linear-gradient(270deg, #f7fbfe, #f7fbfe, #f7fbfe, #f7fbfe, #f7fbfe, transparent);
 
 }
-
-/* .content3{
-  padding-right: 4rem;
-    padding-left: 4rem;
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-} */
 .content3-section {
   display: flex;
   flex-wrap: wrap;
@@ -945,11 +907,11 @@ button:last-child {
 }
 
 .content3-img img {
-  /* aspect-ratio: 1/1; */
   width: 100%;
   height: 100%;
   border-radius: 16px;
   object-fit: cover;
+  min-height: 200px;
 
 }
 
@@ -1042,7 +1004,6 @@ button:last-child {
   text-align: center;
   border-radius: 8px;
   justify-content: center;
-  /* border: 2px solid #9400ff ; */
 
 }
 
@@ -1203,7 +1164,6 @@ button:last-child {
 .top-image img {
   width: 100%;
   border-radius: 16px;
-  /* aspect-ratio: 1.333333; */
   object-fit: cover;
 
 }
@@ -1272,7 +1232,6 @@ button:last-child {
 .button-text>div {
   max-width: 119.55px;
   width: 100%;
-  /* height: 52px; */
   background-color: #0078d4;
   align-items: center;
   justify-content: center;
@@ -1284,7 +1243,6 @@ button:last-child {
   padding: 15px 0px;
   color: #fff;
   border-radius: 8px;
-  /* padding-bottom: 00; */
 }
 
 .button-text span {
@@ -1292,9 +1250,6 @@ button:last-child {
   line-height: 22px;
   letter-spacing: -0.3px;
   font-family: "segoe-medium";
-  /* align-items: center;
-  justify-content: center;
-  text-align: center; */
 }
 .content5{
   display:flex;
@@ -1312,7 +1267,6 @@ button:last-child {
   box-sizing: border-box;
   justify-content: center;
   flex-flow: column;
-  /* position: relative; */
 
 
 }
@@ -1320,7 +1274,6 @@ button:last-child {
   padding-right: .25rem;
     padding-left: .25rem;
     display: flex;
-    /* width: 100%; */
     align-items: center;
     box-sizing: border-box;
     justify-content: center;
@@ -1334,7 +1287,7 @@ button:last-child {
   box-sizing: border-box;
 
 }
-.head {
+.head1{
   display: flex;
   flex-flow: column;
   max-width: 100%;
@@ -1371,21 +1324,12 @@ button:last-child {
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
-  /* position: absolute; */
   height: 100%;
-  /* top:2rem; */
 }
 
 .content5-portion{
   box-sizing: border-box;
-  /* display: block; */
-  /* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain);
-  background-position: center;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  background-size: cover; */
   width: 100%;
-  /* position: relative; */
 }
 .content5-portion-padding{
   display: flex;
@@ -1411,7 +1355,6 @@ display: block;
   box-sizing: border-box;
 }
 .long-button{
-  /* padding-left: .5rem !important; */
   align-items: center !important;
   display: flex;
   padding-bottom: .5rem;
@@ -1430,9 +1373,7 @@ display: block;
  background-color: #fefefe;
  overflow: hidden;
  height: 52px;
- /* padding: 1rem 1rem 1rem 1rem; */
  border: 0.0625rem solid #e1e3e6;
- /* box-shadow: 0 0 0.125rem rgb(0, 0, 0, 0.12), 0 0.125rem 0.25rem rgba(0, 0, 0, 0.14); */
  width: 221.333px;
  align-items: center;
  display: flex;
@@ -1458,7 +1399,6 @@ z-index: 1;
 border-bottom-right-radius: 8px;
 }
 .long-button ul li:last-child span{
-  /* background-color: #005597; */
   width: 100%;
 }
 
@@ -1475,6 +1415,7 @@ border-bottom-right-radius: 8px;
   padding-top: 1.5rem;
   padding-bottom: 3rem;
   width: 100%;
+  
 }
 .tab-panel{
   text-align: center;
@@ -1505,7 +1446,6 @@ border-bottom-right-radius: 8px;
 .tab-panel-top .first-content-footer{
   align-items: center;
   justify-content: center;
-  /* padding-top:16px; */
   margin-top: 15px;
 }
 .tab-panel-img{
@@ -1518,7 +1458,11 @@ border-bottom-right-radius: 8px;
   width:fit-content;
   height: auto;
   object-fit: cover;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1.25rem);
+  border-radius: 16px;
 }
+
 .tab-panel-img img{
   object-fit: cover;
   border-radius: 16px;
@@ -1526,7 +1470,6 @@ border-bottom-right-radius: 8px;
 }
 .content6{
   width: 100%;
-  /* margin-top: -20px; */
 }
 .content6-bg{
   object-fit: cover;
@@ -1534,14 +1477,11 @@ border-bottom-right-radius: 8px;
   height: 100%;
   display: flex;
   overflow: hidden;
-  /* aspect-ratio: 10/5; */
   background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Desktop-AzureRegions-2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=3200&hei=983&qlt=95&fmt=png-alpha&fit=constrain);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 416px;
-  /* aspect-ratio: 4/1; */
-  /* position: relative; */
   box-sizing: border-box
 
 }
@@ -1572,7 +1512,6 @@ width: 100%;
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
   display: flex;
-  /* height: max-content */
   height: 100%;
   gap:16px;
   box-sizing: border-box;
@@ -1873,8 +1812,7 @@ max-width: 20px;
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-  /* width: 50px;
-  height: 50px; */
+ 
 }
 .previous-button{
   
@@ -1920,8 +1858,6 @@ max-width: 20px;
   box-sizing: border-box;
   border-radius: 16px;
   box-shadow: 0 0 0.125rem rgb(0, 0, 0, 0.12), 0 0.125rem 0.25rem rgba(0, 0, 0, 0.14);
-  /* border: 0.0625rem solid #c1c9cf; */
-  /* box-shadow: 0px 0px 1px 3px rgba(0, 0, 0, 0.1); */
   background-color: #fefefe;
   box-sizing: border-box;
 align-items: center;
@@ -1982,6 +1918,23 @@ footer{
   box-sizing: border-box;
   min-width: 280px;
   padding-bottom: 30px;
+  flex-flow: column;
+  box-sizing: border-box;
+
+}
+footer ul li{
+color: #616161;
+  padding: 8px 0;
+  font-size: 11px;
+  line-height: 16px;
+  font-family: "segeo-regular";
+  text-align: left;
+  align-items: flex-start;
+  display: flex;
+}
+footer ul li:hover{
+  text-decoration: underline;
+  color: #000;
 }
 .footer-nav{
   padding: 0 12px;
@@ -2001,7 +1954,9 @@ footer{
   display: flex;
   flex-flow: column;
   align-items: left;
-  text-align: left
+  text-align: left;
+  box-sizing: border-box;
+
 }
 .grid-item-head{
   color: #616161;
@@ -2030,14 +1985,8 @@ footer{
   margin: 0;
 }
 .grid-list ul li{
-  color: #616161;
   padding: 8px 0;
-  font-size: 11px;
-  line-height: 16px;
-  font-family: "segeo-regular";
-  text-align: left;
-  align-items: flex-start;
-  display: flex;
+  
 }
 .bottom-footer{
   display: flex;
@@ -2046,12 +1995,62 @@ footer{
     padding: 30px 24px 16px;
     box-sizing: border-box;
     max-width: calc(1600px + 10%);
+    /* padding-bottom: 18px; */
+    /* margin-top: -5px; */
+}
+.bottom-link{
+  display: flex;
+  flex-flow: column;
+}
+.bottom-link>div{
+  color: #616161;
+  padding: 8px 0;
+  font-size: 11px;
+  line-height: 16px;
+  font-family: "segeo-regular";
+  text-align: left;
+  align-items: flex-start;
+  display: flex;
+  padding-right: 24px;
+}
+.link img{
+  width: 26px;
+  height: 22px;
+  margin-right: 5px;
+}
+.link svg{
+  margin-right: 5px;
+}
+.bottom-link>div:hover{
+  text-decoration: underline;
+}
+.bottom-ul{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  width: 100%;
+}
+.bottom-ul ul{
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    /* padding: 8px 0 0 0; */
+    padding-left: 4px;
 
+}
+.bottom-ul  ul li {
+  padding: 6px 11px 0 0;
+  width: max-content;
 }
 @media screen and (min-width:270px) {
 
   .background video {
-    min-height: 608px;
+    aspect-ratio: 1/1.9;
   }
 
   .nav-content2 {
@@ -2077,7 +2076,7 @@ footer{
 
 }
 
-}`
+}
 
 @media screen and (min-width:346px) {
   .background video {
@@ -2125,21 +2124,21 @@ footer{
   }
 
   .banner-margin {
-    padding: 0 64px;
+    /* padding: 0 64px; */
     display: flex;
     align-items: center;
-    /* height: 100%; */
-    /* padding-top: 20px; */
+    
   }
-
+.banner-content-padding{
+  padding-left: 0;
+  padding-right: 0;
+}
   .banner-content {
     display: flex;
     flex-flow: column;
     margin-top: 2rem;
     text-align: left;
-    /* align-items: center; */
     justify-content: left;
-
     height: 100%;
   }
 
@@ -2157,6 +2156,11 @@ footer{
     font-size: 15px;
     line-height: 1.375rem;
     letter-spacing: -0.3px;
+    padding-right: 0.75rem;
+    padding-right: 0.85rem;
+  }
+  .head-buttons button  span{
+    margin-left: -0.5px;
   }
 
   .head-buttons button:first-child {
@@ -2179,16 +2183,11 @@ footer{
   .content1 {
     padding-right: 4rem;
     padding-left: 4rem;
-    /* width: 100%; */
     margin-right: auto;
     margin-left: auto;
     display: block;
     width: 100%;
     box-sizing: border-box;
-  }
-
-  .tab-arrow {
-    /* margin-right: 8px; */
   }
 
   .banner-content {
@@ -2216,7 +2215,6 @@ footer{
   }
   .content5-bg{
     background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain);
-    /* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain); */
   }
   .glob-button-margin{
     width: fit-content;
@@ -2226,26 +2224,85 @@ footer{
 
   }
   .content8{
-    /* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/cta-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=868&qlt=100&fmt=png-alpha&fit=constrain); */
    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/cta-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=868&qlt=100&fmt=png-alpha&fit=constrain);
   }
-
+  footer{
+    padding-bottom: 0px;
+  }
+  .footer-grid{
+    grid-template-columns: repeat(3,1fr);
+    box-sizing: border-box;
+  }
+  .bottom-link>div:first-child{
+    padding-right: 24px;
+    padding: 0;
+  }
+  .bottom-link>div:nth-child(2){
+    padding-right: 24px;
+    padding-top: 4px;    
+    width: max-content;
+    margin: 8px 0 16px 0;
+    padding-bottom: 0;
+}
+.bottom-link>div:last-child{
+  padding-right: 24px;
+  padding-top: 4px;
+  padding-bottom: 0;
+}
+.bottom-ul ul{
+  padding: 0;
+  margin: 3px 0;
+  margin-top: 12px;
+  margin-left: 8px;
+}
 }
 
 
-/* margin:0 0 0.75rem */
 @media screen and (min-width:717px) {
-  .background video {
-    min-height: 368px;
-  }
+  
 
   .mobile-hide {
     display: none;
   }
   .content5-bg{
     background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain);
-     /* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/resources-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=383&qlt=85&fmt=png-alpha&fit=constrain); */
   }
+}
+@media screen and (min-width:768px) {
+  .bottom-link>div:first-child{
+    white-space: nowrap;
+  }
+  .bottom-link>div:last-child{
+    float: left;
+  }
+  .bottom-link{
+    width: fit-content;
+  }
+  .bottom-ul{
+
+    flex: 1;
+  display: flex;
+  align-items: center;
+  column-gap: 27px;
+  row-gap: 5px;
+  padding-left: 20px;
+  padding-right: 24px;
+  justify-content:space-between;
+  margin-bottom: 2px;
+    flex-wrap: wrap;
+    flex-flow: row;
+  }
+  .bottom-ul ul{
+    gap:15px
+  }
+  .bottom-ul>ul:first-child{
+    width:100px;
+}
+.bottom-ul>ul:last-child{
+width: 100%;
+align-items: flex-end;
+margin-left: 50px;
+}
 }
 @media screen and (min-width:813px) {
   .content6-bg{
@@ -2259,6 +2316,10 @@ footer{
 }
 
 @media screen and (min-width:860px) {
+  header{
+    min-width: 280px;
+    display: block;
+  }
   .header-padding {
     display: none;
   }
@@ -2266,7 +2327,11 @@ footer{
   .azure-button {
     display: none;
   }
-
+.logo{
+  margin-left: 0;
+  padding-right: 18px;
+  padding-left: 10px;
+}
   .hide-tab {
     display: none;
   }
@@ -2276,8 +2341,7 @@ footer{
     margin-bottom: 2px;
     padding-left: 24px;
     padding-right: 24px;
-    width: 100%;
-    /* min-height: 54px; */
+    /* width: 100%; */
     margin-top: -8px;
     margin-right: 3px;
   }
@@ -2291,29 +2355,24 @@ footer{
   }
 
   .tab-left {
-    /* width: 100%; */
     display: flex;
     flex-flow: row;
     justify-content: left;
     align-items: center;
   }
 
-  .logo {
-    padding-left: 9px;
-  }
-
+  
   .azure-text {
     display: flex;
     flex-flow: row;
     width: 81.1833px;
     height: 100%;
     height: 100%;
-
     text-align: center;
     font-size: 15px;
     align-items: center;
     justify-content: center;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     /* padding-top: 6px; */
     margin-top: 5.5px;
   }
@@ -2322,13 +2381,10 @@ footer{
     font-family: "segoe-medium";
     padding: 15px 6px 16px 16px;
     float: left;
-    /* height: 100%; */
     margin-top: 1px;
     font-size: 18px;
     font-weight: 400;
-    /* margin-top: -3px */
     margin-left: 3px;
-    /* padding-right: ; */
   }
 
   .azure-text::before {
@@ -2336,14 +2392,12 @@ footer{
     height: 24px;
     content: " ";
     margin-left: 7px;
-    /* position: absolute; */
     margin-top: 1px;
     top: 15px;
     left: 0;
   }
 
   .header-nav {
-    /* padding-left: 2px; */
     padding-right: 1px;
     height: 100%;
     overflow: hidden;
@@ -2364,7 +2418,6 @@ footer{
   .header-nav ul {
     display: flex;
     flex-flow: row;
-    /* width: 100px; */
     list-style: none;
     align-items: flex-start;
     justify-content: left;
@@ -2397,30 +2450,24 @@ footer{
 
   .header-nav ul li:nth-child(4) {
     margin-left: 4px;
-    /* display: none; */
-    /* letter-spacing:- 0.0000001px; */
-
   }
 
   .header-nav ul li:nth-child(5) {
     margin-left: -9px;
-    /* display: none; */
-
   }
 
   .header-nav ul li:nth-child(6) {
-    display: none;
-
+    margin-left: -2px;
   }
 
   .header-nav ul li:last-child {
-    display: flex;
+    display:none;
   }
 
   .header-nav ul li img {
-    width: 11px;
+    width: 11.0px;
     height: 11px;
-    margin-left: 5.5px;
+    margin-left: 5px;
     margin-top: 5px;
   }
 
@@ -2434,7 +2481,6 @@ footer{
 
   .tab-right {
     display: flex;
-    /* padding:10px; */
     flex-flow: row;
     width: 100%;
     justify-content: right;
@@ -2454,13 +2500,15 @@ footer{
   }
 
   .background {
-    /* width: 100%; */
     height: 100%;
     overflow: hidden;
   }
-
+.banner{
+  height: 624px;
+}
   .background video {
     height: 100%;
+    /* height: 628px; */
     max-height: 628px;
     width: 100%;
   }
@@ -2470,13 +2518,23 @@ footer{
     flex-flow: row;
     width: 100%;
     padding: 6rem 0;
-    /* height: fit-content; */
+    box-sizing: border-box;
+
+  }
+  .banner-content-padding>div:first-child{
+   display: flex;
+   flex-flow: row;
+   padding: 0 3.5rem;
+   align-items: center;
+   box-sizing: border-box;
+
 
   }
 
   .banner-margin {
     width: 50%;
-
+    margin: 0;
+    margin-top: -50px;
   }
 
   .banner-content {
@@ -2484,21 +2542,48 @@ footer{
     flex-flow: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin-top: 0;
-  }
+    margin-top: 10px;
+    padding: 0;  }
 
   .head h1 {
     font-size: 40px;
     line-height: 48px;
-    margin-top: 5px;
+    letter-spacing: -2px;
+    width: 100%;
+    margin-top: 4px;
   }
+.heading-paragraph{
+  padding-top: 1rem;
+}
+.head-buttons-padding{
+  margin-top: 2rem;
+}
+.head-buttons button span{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  letter-spacing: -0.3px;
+}
+.head-buttons button:nth-child(2){
+ padding-left: 0.9rem;
+ padding-right: 0.8rem;
+ letter-spacing: -0.4px;
 
+}
   .banner-empty {
     display: flex;
-    width: 50%;
+    /* width: 40%; */
     height: fit-content;
   }
 
+.search{
+  display: flex;
+
+}
+.search img{
+  display: flex;
+  margin-top: -3px;
+  margin-right: 10px;
+}
   .search span {
     display: none;
   }
@@ -2514,8 +2599,6 @@ footer{
     margin-left: auto;
     background-color: #fefefe;
     min-height: max-content;
-    /* height: 500px; */
-    /* padding-bottom: 100px; */
   }
 
   .nav-content1 .hide-span {
@@ -2559,18 +2642,7 @@ footer{
     padding-right: 45px;
     cursor: pointer;
   }
-
-  .nav-content1 ul li:first-child {
-    /* padding-left: 0; */
-  }
-
-  .nav-content1 ul li:first-child span {
-    /* padding-left: 0; */
-
-  }
-
   .nav-content1 ul li:last-child {
-    /* padding-left: 0; */
     padding-top: 11px;
     margin-left: -3px;
   }
@@ -2580,14 +2652,12 @@ footer{
   }
 
   .nav-content1 span {
-    /* padding:.75rem  0; */
     font-family: "segoe-medium";
     font-size: 14px;
     line-height: 22px;
     letter-spacing: -0.48px;
     display: flex;
     color: #004275;
-    /* background-color: #ffffff; */
     justify-content: space-between;
     width: 100%;
     gap: 0.5rem;
@@ -2595,14 +2665,11 @@ footer{
   }
 
   .nav-content2 button {
-    /* height:58px ; */
     align-items: center;
-    /* margin-top: 10px; */
     padding: 7px 16px;
   }
 
   .nav-content1 ul li:first-child {
-    /* border-bottom: 5px solid #0067b8; */
     gap: 15px;
   }
 
@@ -2638,7 +2705,7 @@ footer{
   }
 
   .content-item {
-    border-radius: 16px;
+    border-radius: 24px;
   }
 
   .content1 {
@@ -2650,55 +2717,39 @@ footer{
     padding-left: 8px;
     padding-right: 8px;
   }
-
   .first-content {
     gap: 1rem
   }
-
   .empty {
     width: 50%;
+  }
+.content3-bg{
+background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/product-background_desktop_homepage?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1600&hei=1129&qlt=100&fmt=png-alpha&fit=constrain);
 
   }
-
   .content2-head {
     display: flex;
     flex-flow: column;
     max-width: 50%;
     padding: 0;
   }
-
-  /* .section-margin{
-  position: relative; 
-
-} */
-  /* .section>div{
-  position: relative;
-} */
   .section-margin {
     position: relative;
 
   }
-
   .section-margin ul {
     max-width: 32%;
 
   }
-
   .section-margin ul li {
     margin-left: 3rem;
   }
 
-  .list-contents {
-    display: flex;
-    flex-flow: column;
-    /* position: relative; */
-  }
-
+  
   .list-img {
     position: absolute;
     top: 0;
     right: 0;
-    /* width: 100%; */
     left: 50%;
   }
 
@@ -2710,10 +2761,6 @@ footer{
   .img-head span {
     font-size: 14px;
     line-height: 20px;
-  }
-
-  .section-margin ul .first-li {
-    /* border-left: 2px solid #0078d4; */
   }
 
   .grid-contents {
@@ -2740,8 +2787,7 @@ footer{
   }
 
   .content2-bg {
-    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/product-background_desktop_homepage?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1600&hei=1129&qlt=100&fmt=png-alpha&fit=constrain);
-    /* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/solution-background_mobile-2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=995&qlt=100&fmt=png-alpha&fit=constrain); */
+    background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/solution-background_mobile-2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=995&qlt=100&fmt=png-alpha&fit=constrain);
   }
   .big-button-background{
     display: flex;
@@ -2750,7 +2796,6 @@ footer{
   }
   .top-image{
     height: 100%;
-    /* flex: 0 0 50%; */
     max-width: 50%;
     display: flex;
     aspect-ratio: 10/13.8;
@@ -2769,14 +2814,29 @@ footer{
   }
   .button-empty{
    min-height: 70px;
-    /* eight: 60px;h */
     display: flex;
+  }
+  .section-margin ul {
+  padding-top: 20px;
+  }
+  .list-border{
+    width: 100%;
+    border-left: 4px solid #0078d4;
+    padding: 2rem 0;  
+    max-width: 32%;
+  }
+  .section-margin ul {
+    max-height: 300px;
+    overflow: scroll;
+  }
+  .list-contents{
+    margin-left: 40px;
+    /* padding-bottom: 100px; */
   }
   .content4-padding{
     padding: 4.5rem 0;
   }
   .content5-portion .tab-arrow{
-    /* display: block; */
     display: flex;
     margin-right: 0;
     height: 65px;
@@ -2840,7 +2900,6 @@ footer{
 .content7-descript{
   height: 100%;
   display: flex;
-  /* justify-content: center; */
   gap:2rem;
   padding: 1.5rem;
 }
@@ -2920,7 +2979,6 @@ border-bottom-right-radius: 16px;
   grid-template-columns: repeat(3,1fr);
 }
 .content8{
-/* background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/cta-background_mobile@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=360&hei=868&qlt=100&fmt=png-alpha&fit=constrain); */
 background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/CTA-BG-desktop@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1600&hei=512&qlt=100&fmt=png-alpha&fit=constrain);
 }
 .card{
@@ -2945,6 +3003,14 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
   margin-top:1px;
 
 }
+.bottom-footer{
+  display: flex;
+  /* flex-flow: row; */
+  justify-content: space-between;
+}
+.bottom-ul{
+  bottom: 0;
+}
 }
 @media screen and (min-width:920px) {
   .nav-content2 button {
@@ -2953,9 +3019,6 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
   }
 
   .nav-content1 ul li:last-child {
-    /* padding-left: 0; */
-    /* padding-top: 10px; */
-
     padding: 0;
   }
 }
@@ -2972,32 +3035,45 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
 }
 
 @media screen and (min-width:1084px) {
+  header{
+    width: 1005;
+  }
   .header-padding {
     display: none;
   }
-
+.tab-header{
+  padding: 0;
+  margin-right: 0;
+}
   .tab-header-padding {
     padding: 0 5%;
-    /* gap: 70px; */
   }
 
   .header-nav ul .hide-tab {
     display: none;
   }
-
+  .header-nav ul li:last-child {
+    margin-left: 2px;
+    letter-spacing: -0.7px;
+  }
+  .tab-right{
+   margin-right: 10px;
+  }
   .rightside-nav {
     width: fit-content;
     display: flex;
     flex-flow: row;
     height: 100%;
-    justify-content: flex-start;
+    justify-content:left;
     align-items: center;
     padding-top: 0;
-    /* padding-bottom: 10px; */
-    /* margin-left: 20px; */
-    gap: 10px;
+    margin-left: 11px;
+    
   }
-
+.rightside-nav>div{
+  display: flex;
+  gap: 16px;
+}
   .rightside-nav ul {
     display: flex;
     flex-flow: row;
@@ -3006,7 +3082,9 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
     justify-content: flex-start;
     max-width: min-content;
     align-items: flex-start;
-    /* max-width: 418.783px; */
+    padding-left: 0;
+    gap: 5px;
+    margin-right: 10px;
   }
 
   .rightside-nav ul li {
@@ -3019,28 +3097,36 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
     letter-spacing: -0.5px;
     max-width: min-content;
     cursor: pointer;
-    padding: 10px 7px 0px 7px;
+    padding: 10px 8px 0px 7px;
     align-items: center;
     justify-content: center;
+    margin-left: -2px;
+    margin-top: 1px;
 
   }
 
   .rightside-nav .green {
     background: #89c402;
     width: max-content;
-
-    color: #262626;
+    color: #192400;
     font-family: "azure-norm";
     font-size: 14px;
     border: none;
-    padding: 5px 5px;
+    padding: 3.5px 8px 0 8px;
     padding-bottom: 8px;
     border-radius: 3px;
     align-items: center;
-    /* gap:/ */
-    margin-top: 10px;
+    padding-top: 3px;
+    margin-top: 15px;
+    letter-spacing: -0.4px;
+    max-height: 31px;
   }
-
+.rightside-nav ul li:first-child{
+  margin-right: -px;
+}
+.rightside-nav ul li:nth-child(2){
+  margin-right: -4px;
+}
   .rightside-nav ul li:nth-child(4) {
     margin-top: 12px;
     padding-bottom: 0;
@@ -3050,7 +3136,7 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
   .rightside-nav ul li:nth-child(3) {
     min-width: 77.963px;
     width: 100%;
-    /* background-color: aqua; */
+    margin-left: 1px;
   }
 
   .rightside-nav ul li:not(:nth-child(4)) {
@@ -3069,16 +3155,18 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
     border: 1px solid;
     color: #262626;
     align-items: center;
-    /* padding-bottom: 2px; */
     margin-top: 15px;
-    /* padding-left: 7px; */
-    /* padding-right: 7px; */
     display: flex;
-    align-items: center;
     justify-content: center;
-    /* padding-bottom: 15px; */
-    display: flex;
     min-width: 57.116px;
+    line-height: 35px;
+
+  }
+  .rightside-nav button:last-child{
+    margin-bottom: 7px;
+    padding-left: 5px;
+    align-items: center;
+
 
   }
 
@@ -3089,7 +3177,32 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
   .header-nav ul li:last-child {
     display: flex;
   }
-
+  .sticky-nav{
+    margin-top: 4.2px;
+  }
+.nav-content1{
+  margin-top: 0.65rem;
+  margin-left: 0.35rem;
+  /* margin-right: 0.25rem; */
+  margin-bottom: 0;
+}
+.nav-content1 ul{
+  padding-bottom: 0;
+}
+.nav-content1 ul li{
+  padding-left: 3px;
+}
+.nav-content1 ul li:last-child{
+  margin-left: 3px;
+}
+.nav-content2{
+  margin-right: -3px;
+  margin-top: -2px;
+}
+.nav-content2 button{
+  padding: 7px 12px;
+  letter-spacing: -0.3px;
+}
   .content1 {
     width: 90%;
     box-sizing: content-box;
@@ -3106,7 +3219,60 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
   .content8{
     background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/CTA-BG-desktop@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=3200&hei=1024&qlt=100&fmt=png-alpha&fit=constrain);
   }
+  .footer-grid{
+    grid-template-columns: repeat(6,1fr);
+  }
+  .list-border{
+    width: 100%;
+    border-left: 4px solid #0078d4;
+    padding: 2rem 0;  }
+  .section-margin ul {
+    max-height: 300px;
+    overflow: scroll;
+  }
+  .list-contents{
+    margin-left: 40px;
+  }
 
+.bottom-link{
+ flex-flow: row;
+}
+.bottom-link>div:nth-child(2){
+ margin: 0;
+}
+.bottom-ul{
+  justify-content: right;
+  align-self: flex-end;
+  width: 85%;
+  margin-top: -20px;
+}
+
+}
+@media screen  and (min-width:1098px){
+  .bottom-footer{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+.bottom-ul>ul:first-child{
+  display: none;
+}
+.bottom-ul{
+  width: 100%;
+  margin-left:0;
+  padding-left: 0;
+  margin-bottom: 0;
+  
+}
+.bottom-ul ul{
+  margin-left:0 ;
+}
+.bottom-ul>ul:last-child{
+  margin-left:0 ;
+  justify-content:flex-end;
+
+}
 }
 
 @media screen and (min-width:1172px) {
@@ -3148,17 +3314,6 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
     display: none;
   }
 
-  .banner-content-padding {
-
-    /* padding:  6rem  0;
-    padding-right: 12%;
-    padding-left: 12%;
-    width: 70%;
-    justify-content: center;
-    align-items: center; */
-
-  }
-
   .banner-content-padding>div {
     align-items: center;
     display: flex;
@@ -3169,7 +3324,6 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
   }
 
   .banner-margin {
-    width: 50%;
     padding: 0;
     display: flex;
     align-items: center;
@@ -3178,7 +3332,6 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
 
   .banner-content {
     justify-content: center;
-    /* align-items: center; */
   }
 }
 
@@ -3213,20 +3366,40 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
 }
 
 @media screen and (min-width:1440px) {
+
+
+  .banner{
+    box-sizing: border-box;
+
+  }
   .banner-content-padding {
-    padding: 6rem 0;
+    padding: 6rem 0rem;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+  
 
   }
 
-  .banner-content-padding>div {
-    /* max-width: 1328px; */
+  .banner-content-padding>div:first-child {
+    max-width: 1328px;
     padding-right: 5%;
-    padding-left: 5%;
-    width: 90%;
-    align-items: center;
-    justify-content: initial;
+    padding-left: 5%; 
+    margin-right: auto;
+  margin-left: auto;
+    /* align-items: center;
+    /* max-width: 1328px; */
+    width: 90%;   
+     /* justify-content: center;  */
+     max-width: 1328px;
+    box-sizing: content-box;
+  
   }
-
+  
+.desktop-margin{
+  width: 100%;
+  margin-left: -5px;
+}
   .banner-margin {
     width: 50%;
 
@@ -3240,6 +3413,7 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
   .head h1 {
     font-size: 48px;
     line-height: 56px;
+    letter-spacing: -2.4px;
   }
 
   .heading-paragraph p {
@@ -3247,7 +3421,15 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
     line-height: 32px;
     letter-spacing: -0.6px;
   }
-
+.stickynav-padding{
+  padding-right: 5%;
+    padding-left: 5%;
+    width: 90%;
+    box-sizing: content-box;
+}
+.sticky-nav ul{
+  margin-top: -1px;
+}
   .content1 {
     max-width: 1328px;
     padding-right: 5%;
@@ -3255,7 +3437,11 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
     width: 90%;
     box-sizing: content-box;
   }
-
+.content3-bg{
+  background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/product-background_desktop_homepage?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1600&hei=1129&qlt=100&fmt=png-alpha&fit=constrain);
+   object-fit: cover;
+   
+}
   .content3-section {
     display: flex;
     flex-flow: row;
@@ -3314,6 +3500,23 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
 .content8{
   background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/CTA-BG-desktop@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=3200&hei=1024&qlt=100&fmt=png-alpha&fit=constrain);
 }
+.head-one h2{
+  font-size: 32px;
+  /* font-size: 40px; */
+  line-height: 40px;
+  letter-spacing: -1.6px;
+}
+.tab-header{
+  padding: 0;
+}
+.stickynav-padding{
+  max-width: 1328px;
+  align-items: center;
+  padding-right: 5%;
+    padding-left: 5%;
+    width: 90%;
+    box-sizing: content-box;
+}
 }
 @media screen and (min-width:1471px) {
   .banner-content {
@@ -3331,4 +3534,90 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
     display: none;
   }
 }
-/* 2946 */
+@media screen and (min-width:1800px) {
+  .azure-text p{
+    padding:15px 6px 16px 30px;
+    /* margin-left: 5px; */
+  }
+  .azure-text::before {
+    margin-left: 20px;
+  }
+  .header-nav{
+    height: 100%;
+  white-space: nowrap;
+  /* margin-left: 13px; */
+  overflow-x: visible;
+  flex: 1 1 auto;
+}
+  
+  .header-nav ul{
+    margin-left: 21.8px;
+    gap: 29px;
+    
+  }
+  .header-nav ul li{
+    min-width: 0;
+    letter-spacing: -0.35px;
+    gap: 0;
+    margin-left: 0;
+  }
+  .header-nav ul li:nth-child(2) {
+    margin-left: 0;
+}
+.header-nav ul li:nth-child(3) {
+  margin-left: 0;
+}
+.header-nav ul li:nth-child(4) {
+  margin-left: 0;
+}
+.header-nav ul li:nth-child(5) {
+  margin-left: 0px;
+}.header-nav ul li:nth-child(6) {
+  margin-left: 0px;
+}
+.rightside-nav ul{
+ padding-left: 0;
+}
+.rightside-nav ul li{
+  padding-right: 15px;
+}
+.rightside-nav ul li:nth-child(2) {
+ padding-right: 17px;
+}
+.rightside-nav ul li:nth-child(3) {
+  min-width: 70;
+  width: 100%;
+}
+.rightside-nav>div{
+  gap:20px;
+}
+.rightside-nav .signin{
+  border: 1px solid black;
+  background-color: transparent;
+  padding-left: 10px;
+  padding-right: 8px;
+  padding-bottom: 5px;
+  padding-top: 6px;
+
+}
+.rightside-nav.green{
+  letter-spacing: 0px;
+  padding-left: 9px;
+  padding-right: 10px;
+  padding-bottom: 4px;
+}
+.tab-header{
+  margin-bottom: 3px;
+}
+.content1-head>div {
+  padding-bottom: 7px;
+}
+.content-one{
+  padding-top: 20px;
+  margin-left: -12px;
+  padding-right: .25rem;
+  padding-left: .25rem;
+margin-top: 1px;
+}
+}
+
