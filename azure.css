@@ -332,6 +332,7 @@ button:last-child {
   border-top: 1px solid #d4d4d4;
   position: sticky;
   z-index: 500;
+   top: 0;
 
 }
 
@@ -1287,12 +1288,13 @@ button:last-child {
   box-sizing: border-box;
 
 }
-.head1{
+.head{
   display: flex;
   flex-flow: column;
   max-width: 100%;
   padding-bottom: 20px;
   box-sizing: border-box;
+  align-items: center;
 
 }
 
@@ -1908,7 +1910,7 @@ align-items: center;
 .spacer{
   width: 100%;
   height: 48px;
-  color: #f7f7f7;
+  color: #fdf7f7;
 }
 footer{
   background-color: #f2f2f2;
@@ -1938,8 +1940,8 @@ footer ul li:hover{
 }
 .footer-nav{
   padding: 0 12px;
-  max-width: calc(1600px + 10%);
-  display: block;
+  /* max-width: calc(1600px + 10%); */
+  display: flex;
   box-sizing: border-box;
 }
 .footer-grid{
@@ -2829,9 +2831,8 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
     max-height: 300px;
     overflow: scroll;
   }
-  .list-contents{
-    margin-left: 40px;
-    /* padding-bottom: 100px; */
+  .section-margin ul li {
+    padding-top: 20px;
   }
   .content4-padding{
     padding: 4.5rem 0;
@@ -2882,19 +2883,17 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
   flex-flow: row-reverse;
 }
 .content7-img{
-  /* padding-bottom: 0.5rem; */
-  /* aspect-ratio: 351/450; */
-  object-fit: cover;
-  position: center;
-  border-radius: 16px;
-
+ 
+  overflow: hidden;
 }
 .content7-img img{
-  aspect-ratio: 351/450;
-  position: center;
+  
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
   object-fit: cover;
-  border-radius: 16px;
-  height: 503px;
+  object-position: center;
+  height: 100%;
 
 }
 .content7-descript{
@@ -3025,12 +3024,25 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
 @media screen and (min-width:966px) {
 
   .content7-img img{
-    height: 461px;
+    /* height: 461px; */
+    /* object-fit: cover; */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
   }
 }
 @media screen and (min-width:973px) {
   .content7-img img{
-    height: 433px;
+    /* height: 433px; */
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
   }
 }
 
@@ -3219,9 +3231,34 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
   .content8{
     background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/CTA-BG-desktop@2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=3200&hei=1024&qlt=100&fmt=png-alpha&fit=constrain);
   }
+  .footer{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+
+
+  }
+  .footer-nav{
+    justify-content: right;
+    display: flex;
+    align-items: center;
+    padding-right: 6.35%;
+    padding-left: 6.35%;
+    width: 100%;
+    max-width: calc(1600px + 10%); 
+    box-sizing: border-box;
+  }
   .footer-grid{
     grid-template-columns: repeat(6,1fr);
-  }
+    box-sizing: border-box;
+    max-width: calc(1600px + 10%); 
+   
+
+   
+    }
   .list-border{
     width: 100%;
     border-left: 4px solid #0078d4;
@@ -3254,6 +3291,9 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
     flex-flow: row;
     justify-content: space-between;
     width: 100%;
+    padding-left:6.35%;
+    padding-right: 6.35%;
+    max-width: calc(1600px + 10%);
   }
 .bottom-ul>ul:first-child{
   display: none;
@@ -3290,8 +3330,14 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
 }
 @media screen and (min-width:1218px) {
   .content7-img img{
-   aspect-ratio: 176/145;
-   height: auto;
+   /* aspect-ratio: 176/145; */
+   /* height: auto; */
+   width: 100%;
+   overflow: hidden;
+   border-radius: 20px;
+   object-fit: cover;
+   object-position: center;
+   height: 100%;
   }
 }
 @media screen and (min-width:1254px) {
@@ -3493,8 +3539,14 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
   height: 412px;
 }
 .content7-img img{
-  aspect-ratio: 211/174;
-  height: auto;
+  /* aspect-ratio: 211/174; */
+  /* height: auto; */
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
 
 }
 .content8{
@@ -3620,4 +3672,5 @@ background-image: url(https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcor
 margin-top: 1px;
 }
 }
+
 
